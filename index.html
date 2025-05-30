@@ -3,56 +3,72 @@
 <head>
   <title>Vern Share Booster!</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
       background: orange;
-      font-size: 22px; /* Increased for zoom effect */
-      margin: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
-    }
-
-    button {
-      background-color: rgb(24, 119, 242);
-      font-size: 22px;
-      color: black;
-      padding: 12px 30px;
-      border: none;
-      cursor: pointer;
-    }
-
-    input {
-      padding: 14px 50px;
-      font-size: 20px;
-      color: black;
-      border: 1px solid #ccc;
-      margin-bottom: 15px;
+      font-size: 24px; /* Base zoom level */
     }
 
     h1, h2 {
       color: rgb(24, 119, 242);
-      font-size: 36px;
+      font-size: 48px;
+      margin: 10px 0;
+    }
+
+    input {
+      padding: 16px 60px;
+      font-size: 22px;
+      color: black;
+      border: 2px solid #333;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: rgb(24, 119, 242);
+      font-size: 24px;
+      color: black;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
     }
 
     p {
-      margin-top: 30px;
-      max-width: 700px;
+      margin-top: 40px;
+      max-width: 800px;
       font-size: 20px;
+      padding: 0 20px;
     }
   </style>
 </head> 
 <body>
   <h1>FACEBOOK SHARE</h1>
   <h2>VERN BOOSTER</h2>
+
   <input type="text" id="link" placeholder="Post link" required><br>
   <input type="number" id="limit" placeholder="Enter a limit" required><br>
   <button type="button" onclick="myFunction()">Share now</button>
 
   <p>
     This site is not for sale, credits to @vern the creator of this site. If you see someone claiming this site please report to the creator!
-  </p>  
+  </p>
 
   <script>
     function myFunction() {
