@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>
-     Hell nah!
-  </title>
-     <link rel="stylesheet" href="style.css">
-<body>
+  <title>Vern Share Booster!</title>
+  <style>
+    body {
+      background: orange;
+      font-size: 15px;
+      margin: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-    <h1>FACEBOOK SHARE</h1>
-    <h2>VERN BOOSTER</h2>
-      <input type="link" id="link" placeholder="Post link" required><br><br>
-      <input tyle="enter a limit" id="enter a limit" placeholder="Enter a limit" required><br><br>
-     <button onclick="myFunction()">Share Now</button>
-        </body>
-     <p>
-     This site is not for sale, credits to @vern the creator of this site. If you see someone claiming this site please report to the creator!
-     </p>    
-         <script>
-                 function myFunction() {
-                   let text = " Ano na baliw HAHAHHA tangina umasa ka na naman kasi free? gawa ka ng site mo uy sapakin kita e puro ka na lang free mag code ka bobo ka pala e, diba nauto na naman kita malamang ikaw yan e ganyan ka ka tanga hahahahahahahaha ito ka 🖕🖕🖕🖕       ";
-                   alert(text.trim());
-                 }
-           </script>
-     </head>
+    button {
+      background-color: rgb(24, 119, 242);
+      font-size: 15px;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 12px 40px;
+      color: black;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    h1, h2 {
+      color: rgb(24, 119, 242);
+    }
+
+    p {
+      margin-top: 20px;
+      max-width: 600px;
+    }
+  </style>
+</head> 
+<body>
+  <h1>FACEBOOK SHARE</h1>
+  <h2>VERN BOOSTER</h2>
+  <input type="text" id="link" placeholder="Post link" required><br>
+  <input type="number" id="limit" placeholder="Enter a limit" required><br>
+  <button type="button" onclick="myFunction()">Share now</button>
+
+  <p>
+    This site is not for sale, credits to @vern the creator of this site. If you see someone claiming this site please report to the creator!
+  </p>  
+
+  <script>
+    function myFunction() {
+      let text = " Ano na baliw HAHAHHA tangina umasa ka na naman kasi free? gawa ka ng site mo uy sapakin kita e puro ka na lang free mag code ka bobo ka pala e, diba nauto na naman kita malamang ikaw yan e ganyan ka ka tanga hahahahahahahaha";
+      alert(text.trim());
+    }
+  </script>
+</body>
 </html>
