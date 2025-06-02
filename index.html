@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>💥 Vern Share Booster - Ultra Anime Vibes</title>
@@ -24,7 +24,7 @@
       position: relative;
     }
 
-    /* Canvas background covers entire viewport */
+    /* Canvas covers full viewport */
     #bgCanvas {
       position: fixed;
       top: 0; left: 0;
@@ -34,22 +34,22 @@
       background: linear-gradient(135deg, #1a0033, #000000);
     }
 
-    /* Big explosive anime text */
+    /* Huge Anime Title */
     h1 {
       font-family: 'Kaushan Script', cursive;
       font-weight: 900;
-      font-size: 7.5rem;
+      font-size: 8rem;
       text-align: center;
       letter-spacing: 0.25em;
       color: #ff6af7;
       text-shadow:
-        0 0 10px #ff4fe5,
-        0 0 20px #ff25b3,
-        0 0 30px #ff199d,
-        0 0 40px #ff0880,
-        0 0 50px #ff005a,
-        0 0 60px #d90044,
-        0 0 70px #a6003c;
+        0 0 15px #ff4fe5,
+        0 0 30px #ff25b3,
+        0 0 45px #ff199d,
+        0 0 60px #ff0880,
+        0 0 75px #ff005a,
+        0 0 90px #d90044,
+        0 0 105px #a6003c;
       animation: pulseGlow 3s ease-in-out infinite;
       user-select: text;
       margin-bottom: 0.3em;
@@ -59,15 +59,15 @@
     h2 {
       font-family: 'Orbitron', sans-serif;
       font-weight: 900;
-      font-size: 2.8rem;
+      font-size: 3rem;
       text-align: center;
       letter-spacing: 0.18em;
       color: #7cfffa;
       text-shadow:
-        0 0 12px #28d1d1,
-        0 0 22px #05e1e1,
-        0 0 30px #07baba;
-      margin-bottom: 1.8em;
+        0 0 16px #28d1d1,
+        0 0 30px #05e1e1,
+        0 0 42px #07baba;
+      margin-bottom: 2em;
       animation: slowPulse 4.5s ease-in-out infinite;
       user-select: text;
       z-index: 11;
@@ -76,22 +76,22 @@
     @keyframes pulseGlow {
       0%, 100% {
         text-shadow:
-          0 0 10px #ff4fe5,
-          0 0 20px #ff25b3,
-          0 0 30px #ff199d,
-          0 0 40px #ff0880,
-          0 0 50px #ff005a,
-          0 0 60px #d90044,
-          0 0 70px #a6003c;
+          0 0 15px #ff4fe5,
+          0 0 30px #ff25b3,
+          0 0 45px #ff199d,
+          0 0 60px #ff0880,
+          0 0 75px #ff005a,
+          0 0 90px #d90044,
+          0 0 105px #a6003c;
         color: #ff6af7;
       }
       50% {
         text-shadow:
-          0 0 30px #ff7ae8,
-          0 0 50px #ff4fcb,
-          0 0 70px #ff38cc,
-          0 0 90px #ff1fdb,
-          0 0 120px #ff1fec;
+          0 0 40px #ff7ae8,
+          0 0 70px #ff4fcb,
+          0 0 90px #ff38cc,
+          0 0 120px #ff1fdb,
+          0 0 150px #ff1fec;
         color: #ff99f2;
       }
     }
@@ -99,15 +99,15 @@
     @keyframes slowPulse {
       0%, 100% {
         text-shadow:
-          0 0 12px #28d1d1,
-          0 0 22px #05e1e1,
-          0 0 30px #07baba;
+          0 0 16px #28d1d1,
+          0 0 30px #05e1e1,
+          0 0 42px #07baba;
       }
       50% {
         text-shadow:
-          0 0 30px #07babf,
-          0 0 50px #05e1e1,
-          0 0 70px #28d1d1;
+          0 0 40px #07babf,
+          0 0 70px #05e1e1,
+          0 0 90px #28d1d1;
       }
     }
 
@@ -115,34 +115,34 @@
     .panel {
       background: rgba(10, 10, 40, 0.85);
       border-radius: 28px;
-      padding: 42px 56px;
-      width: 420px;
+      padding: 48px 56px;
+      width: 480px;
       box-shadow:
-        0 0 80px #7cfffaaa,
-        inset 0 0 40px #3bbaff88;
-      backdrop-filter: blur(24px);
-      border: 2.5px solid #7cfffa55;
+        0 0 100px #7cfffaaa,
+        inset 0 0 60px #3bbaff88;
+      backdrop-filter: blur(30px);
+      border: 3px solid #7cfffa55;
       z-index: 11;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 28px;
     }
 
     input, button {
       font-family: 'Share Tech Mono', monospace;
-      font-size: 20px;
-      border-radius: 20px;
+      font-size: 24px;
+      border-radius: 28px;
       border: none;
-      padding: 20px 26px;
+      padding: 24px 34px;
       color: #d0f9ff;
-      background: rgba(124, 255, 250, 0.15);
+      background: rgba(124, 255, 250, 0.18);
       box-shadow:
-        0 0 18px #0bf2f8,
-        inset 0 0 28px #21cdf4;
-      text-shadow: 0 0 5px #0bf2f8;
+        0 0 25px #0bf2f8,
+        inset 0 0 38px #21cdf4;
+      text-shadow: 0 0 6px #0bf2f8;
       transition: all 0.3s ease;
       user-select: text;
-      letter-spacing: 0.07em;
+      letter-spacing: 0.08em;
     }
 
     input::placeholder {
@@ -152,11 +152,11 @@
 
     input:focus {
       outline: none;
-      background: rgba(124, 255, 250, 0.35);
+      background: rgba(124, 255, 250, 0.38);
       box-shadow:
-        0 0 38px #2af4ff,
-        inset 0 0 40px #3bbaff;
-      transform: scale(1.07);
+        0 0 48px #2af4ff,
+        inset 0 0 60px #3bbaff;
+      transform: scale(1.1);
     }
 
     button {
@@ -164,10 +164,10 @@
       cursor: pointer;
       background: linear-gradient(135deg, #7cfffa, #00bcd4);
       box-shadow:
-        0 0 60px #7cfffa,
-        inset 0 0 80px #00a9c4;
-      text-shadow: 0 0 10px #1ff8ff;
-      letter-spacing: 0.13em;
+        0 0 80px #7cfffa,
+        inset 0 0 100px #00a9c4;
+      text-shadow: 0 0 14px #1ff8ff;
+      letter-spacing: 0.15em;
       user-select: none;
       transition: all 0.25s ease;
     }
@@ -175,20 +175,20 @@
     button:hover {
       background: linear-gradient(135deg, #00bcd4, #7cfffa);
       box-shadow:
-        0 0 80px #07e6ff,
-        inset 0 0 110px #0094af;
-      transform: scale(1.15);
+        0 0 100px #07e6ff,
+        inset 0 0 130px #0094af;
+      transform: scale(1.2);
     }
 
     /* Loader ring */
     #loader {
       display: none;
-      margin: 24px auto 0 auto;
-      border: 7px solid #023343;
-      border-top: 7px solid #7cfffa;
+      margin: 28px auto 0 auto;
+      border: 8px solid #023343;
+      border-top: 8px solid #7cfffa;
       border-radius: 50%;
-      width: 52px;
-      height: 52px;
+      width: 56px;
+      height: 56px;
       animation: spin 1.2s linear infinite;
       z-index: 12;
     }
@@ -198,41 +198,47 @@
       100% { transform: rotate(360deg); }
     }
 
-    /* Music control button */
-    #music-toggle {
+    /* Music overlay */
+    #musicOverlay {
       position: fixed;
-      top: 24px;
-      right: 24px;
-      background: transparent;
-      border: 3px solid #7cfffa;
-      border-radius: 50%;
-      width: 52px;
-      height: 52px;
-      color: #7cfffa;
-      font-size: 28px;
-      cursor: pointer;
-      box-shadow: 0 0 25px #7cfffa;
-      user-select: none;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.9);
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: all 0.35s ease;
-      z-index: 21;
+      flex-direction: column;
+      z-index: 999;
+      user-select: none;
     }
-
-    #music-toggle.playing {
-      background: #7cfffa;
-      color: #002222;
-      box-shadow: 0 0 55px #1affff;
+    #musicOverlay button {
+      font-size: 2.6rem;
+      padding: 26px 48px;
+      border-radius: 44px;
+      font-weight: 900;
+      color: #00f9ff;
+      background: transparent;
+      border: 3px solid #00f9ff;
+      text-shadow: 0 0 30px #00f9ff;
+      cursor: pointer;
+      letter-spacing: 0.2em;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+    #musicOverlay button:hover {
+      background: #00f9ff;
+      color: #001818;
+      box-shadow: 0 0 50px #00f9ff;
+      transform: scale(1.1);
     }
 
     /* Footer */
     p {
-      margin-top: 34px;
-      font-size: 16px;
+      margin-top: 40px;
+      font-size: 18px;
       color: #94e6ffcc;
       user-select: none;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
       text-align: center;
       z-index: 11;
       font-family: 'Share Tech Mono', monospace;
@@ -255,12 +261,15 @@
 
   <p>Powered by your endless anime energy 💖</p>
 
-  <button id="music-toggle" title="Toggle Music">▶️</button>
+  <!-- Music start overlay -->
+  <div id="musicOverlay">
+    <button id="startMusicBtn">▶️ PLAY MUSIC & START</button>
+  </div>
 
   <audio id="bgMusic" loop src="https://cdn.pixabay.com/download/audio/2022/03/01/audio_04a7d81f08.mp3?filename=cyberpunk-background-ambient-12344.mp3"></audio>
 
   <script>
-    // Canvas background: colorful flowing waves + sakura petals
+    // Canvas background setup
     const canvas = document.getElementById('bgCanvas');
     const ctx = canvas.getContext('2d');
     let w, h;
@@ -274,7 +283,7 @@
     window.addEventListener('resize', resize);
     resize();
 
-    // Sakura petals class
+    // Sakura petals
     class Petal {
       constructor() {
         this.reset();
@@ -307,111 +316,84 @@
         ctx.beginPath();
         ctx.moveTo(0, 0);
         ctx.bezierCurveTo(5, -5, 10, -5, 10, 0);
-        ctx.bezierCurveTo(10, 5, 5, 5, 0, 0);
-        ctx.closePath();
+        ctx.bezierCurveTo(10, 5, 5, 8, 0, 12);
+        ctx.bezierCurveTo(-5, 8, -10, 5, -10, 0);
+        ctx.bezierCurveTo(-10, -5, -5, -5, 0, 0);
         ctx.fill();
         ctx.restore();
       }
     }
 
-    // Flowing wave class
+    const petals = [];
+    for(let i=0; i<90; i++) petals.push(new Petal());
+
+    // Animated Waves for background
     class Wave {
-      constructor(y, amplitude, wavelength, speed, hue) {
+      constructor(y, amplitude, wavelength, speed, phase=0) {
         this.y = y;
         this.amplitude = amplitude;
         this.wavelength = wavelength;
         this.speed = speed;
-        this.hue = hue;
-        this.phase = 0;
+        this.phase = phase;
       }
       update() {
         this.phase += this.speed;
       }
       draw() {
         ctx.beginPath();
-        ctx.moveTo(0, this.y);
-        for(let x = 0; x <= w; x++) {
-          const y = this.y + Math.sin((x / this.wavelength) * 2 * Math.PI + this.phase) * this.amplitude;
+        ctx.moveTo(0, h);
+        for(let x=0; x<=w; x+=5) {
+          let y = this.y + this.amplitude * Math.sin((x / this.wavelength) + this.phase);
           ctx.lineTo(x, y);
         }
         ctx.lineTo(w, h);
-        ctx.lineTo(0, h);
         ctx.closePath();
-
-        const gradient = ctx.createLinearGradient(0, this.y - this.amplitude, 0, this.y + this.amplitude);
-        gradient.addColorStop(0, `hsla(${this.hue}, 80%, 70%, 0.7)`);
-        gradient.addColorStop(1, `hsla(${this.hue}, 70%, 50%, 0.2)`);
-
+        const gradient = ctx.createLinearGradient(0, this.y - this.amplitude, 0, this.y + this.amplitude + 20);
+        gradient.addColorStop(0, 'rgba(124, 255, 250, 0.5)');
+        gradient.addColorStop(1, 'rgba(0, 182, 212, 0.2)');
         ctx.fillStyle = gradient;
         ctx.fill();
       }
     }
 
-    const petals = [];
-    const petalCount = 80;
-    for(let i=0; i<petalCount; i++) petals.push(new Petal());
-
     const waves = [
-      new Wave(h * 0.6, 45, 250, 0.013, 320),
-      new Wave(h * 0.75, 25, 150, 0.021, 290),
-      new Wave(h * 0.85, 12, 90, 0.015, 270),
+      new Wave(h * 0.7, 45, 240, 0.017, 0),
+      new Wave(h * 0.8, 25, 180, 0.022, 50),
+      new Wave(h * 0.85, 15, 130, 0.015, 90),
     ];
 
-    function animateBg() {
+    function animate() {
       ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = '#000';
+      ctx.fillStyle = '#0a0033';
       ctx.fillRect(0, 0, w, h);
 
-      waves.forEach(wave => {
-        wave.update();
-        wave.draw();
+      waves.forEach(w => {
+        w.update();
+        w.draw();
       });
 
-      petals.forEach(petal => {
-        petal.update();
-        petal.draw();
+      petals.forEach(p => {
+        p.update();
+        p.draw();
       });
 
-      requestAnimationFrame(animateBg);
+      requestAnimationFrame(animate);
     }
-    animateBg();
 
-    // Music control
-    const musicBtn = document.getElementById('music-toggle');
+    animate();
+
+    // Music logic
+    const musicOverlay = document.getElementById('musicOverlay');
+    const startMusicBtn = document.getElementById('startMusicBtn');
     const bgMusic = document.getElementById('bgMusic');
-    let playing = false;
 
-    // Try autoplay after user interaction, fallback to toggle
-    function tryPlayMusic() {
+    startMusicBtn.addEventListener('click', () => {
       bgMusic.play().then(() => {
-        playing = true;
-        musicBtn.textContent = '🔊';
-        musicBtn.classList.add('playing');
-      }).catch(() => {
-        // Autoplay blocked
-        playing = false;
-        musicBtn.textContent = '▶️';
-        musicBtn.classList.remove('playing');
+        musicOverlay.style.display = 'none';
+      }).catch(e => {
+        alert('Music failed to play: ' + e.message);
       });
-    }
-
-    musicBtn.addEventListener('click', () => {
-      if (playing) {
-        bgMusic.pause();
-        playing = false;
-        musicBtn.textContent = '▶️';
-        musicBtn.classList.remove('playing');
-      } else {
-        bgMusic.play();
-        playing = true;
-        musicBtn.textContent = '🔊';
-        musicBtn.classList.add('playing');
-      }
     });
-
-    // Attempt autoplay on any user interaction
-    window.addEventListener('click', tryPlayMusic, {once: true});
-    window.addEventListener('keydown', tryPlayMusic, {once: true});
 
     // Boost button logic
     const boostBtn = document.getElementById('boost-btn');
@@ -421,7 +403,7 @@
       const token = document.getElementById('token').value.trim();
       const message = document.getElementById('message').value.trim();
 
-      if (!token || !message) {
+      if(!token || !message) {
         alert('Please enter both token and message!');
         return;
       }
@@ -432,9 +414,10 @@
       setTimeout(() => {
         loader.style.display = 'none';
         boostBtn.disabled = false;
-        alert('Shares boosted successfully! 🌸');
-      }, 3500);
+        alert('Shares boosted successfully! 💥🌸');
+      }, 4000);
     });
+
   </script>
 </body>
 </html>
