@@ -2,8 +2,8 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <title>💥 Vern Share Booster - Explosive Anime Cyberpunk</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Kaushan+Script&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <title>💥 Vern Share Booster - Ultra Anime Vibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Kaushan+Script&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   <style>
     /* Reset */
     * {
@@ -16,7 +16,7 @@
       height: 100%;
       overflow: hidden;
       background: #000;
-      color: #72d6ff;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,89 +24,90 @@
       position: relative;
     }
 
-    /* CANVAS background covers entire viewport */
+    /* Canvas background covers entire viewport */
     #bgCanvas {
       position: fixed;
       top: 0; left: 0;
       width: 100vw;
       height: 100vh;
       z-index: 0;
-      background: radial-gradient(circle at center, #110022, #000000 80%);
+      background: linear-gradient(135deg, #1a0033, #000000);
     }
 
-    /* Explosive text effect */
+    /* Big explosive anime text */
     h1 {
       font-family: 'Kaushan Script', cursive;
-      font-size: 4rem;
-      color: #ff4fcc;
-      text-shadow:
-        0 0 6px #ff00b3,
-        0 0 12px #ff0099,
-        0 0 20px #ff0080,
-        0 0 30px #ff0055,
-        0 0 40px #ff0033;
-      animation: pulseBomb 3s ease-in-out infinite, shake 0.4s ease-in-out infinite;
-      letter-spacing: 0.15em;
-      user-select: text;
-      z-index: 10;
-      margin-bottom: 0.2em;
+      font-weight: 900;
+      font-size: 7.5rem;
       text-align: center;
+      letter-spacing: 0.25em;
+      color: #ff6af7;
+      text-shadow:
+        0 0 10px #ff4fe5,
+        0 0 20px #ff25b3,
+        0 0 30px #ff199d,
+        0 0 40px #ff0880,
+        0 0 50px #ff005a,
+        0 0 60px #d90044,
+        0 0 70px #a6003c;
+      animation: pulseGlow 3s ease-in-out infinite;
+      user-select: text;
+      margin-bottom: 0.3em;
+      z-index: 11;
     }
 
     h2 {
       font-family: 'Orbitron', sans-serif;
-      font-weight: 700;
-      font-size: 1.6rem;
-      color: #72d6ff;
-      text-shadow:
-        0 0 8px #44b3ff,
-        0 0 16px #107bde;
-      letter-spacing: 0.12em;
-      margin-bottom: 1.4em;
-      animation: pulseGlow 4s ease-in-out infinite;
-      user-select: text;
+      font-weight: 900;
+      font-size: 2.8rem;
       text-align: center;
-      z-index: 10;
-    }
-
-    @keyframes pulseBomb {
-      0%, 100% {
-        text-shadow:
-          0 0 6px #ff00b3,
-          0 0 12px #ff0099,
-          0 0 20px #ff0080,
-          0 0 30px #ff0055,
-          0 0 40px #ff0033;
-        color: #ff4fcc;
-      }
-      50% {
-        text-shadow:
-          0 0 18px #ff4fcc,
-          0 0 38px #ff4fcc,
-          0 0 60px #ff2b9f,
-          0 0 80px #ff0055,
-          0 0 100px #ff0033;
-        color: #ff9cea;
-      }
-    }
-
-    @keyframes shake {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      25% { transform: translate(-2px, 1px) rotate(-1deg); }
-      50% { transform: translate(1px, -1px) rotate(1deg); }
-      75% { transform: translate(-1px, 2px) rotate(-1deg); }
+      letter-spacing: 0.18em;
+      color: #7cfffa;
+      text-shadow:
+        0 0 12px #28d1d1,
+        0 0 22px #05e1e1,
+        0 0 30px #07baba;
+      margin-bottom: 1.8em;
+      animation: slowPulse 4.5s ease-in-out infinite;
+      user-select: text;
+      z-index: 11;
     }
 
     @keyframes pulseGlow {
       0%, 100% {
         text-shadow:
-          0 0 8px #44b3ff,
-          0 0 16px #107bde;
+          0 0 10px #ff4fe5,
+          0 0 20px #ff25b3,
+          0 0 30px #ff199d,
+          0 0 40px #ff0880,
+          0 0 50px #ff005a,
+          0 0 60px #d90044,
+          0 0 70px #a6003c;
+        color: #ff6af7;
       }
       50% {
         text-shadow:
-          0 0 20px #107bde,
-          0 0 36px #005d9a;
+          0 0 30px #ff7ae8,
+          0 0 50px #ff4fcb,
+          0 0 70px #ff38cc,
+          0 0 90px #ff1fdb,
+          0 0 120px #ff1fec;
+        color: #ff99f2;
+      }
+    }
+
+    @keyframes slowPulse {
+      0%, 100% {
+        text-shadow:
+          0 0 12px #28d1d1,
+          0 0 22px #05e1e1,
+          0 0 30px #07baba;
+      }
+      50% {
+        text-shadow:
+          0 0 30px #07babf,
+          0 0 50px #05e1e1,
+          0 0 70px #28d1d1;
       }
     }
 
@@ -115,80 +116,80 @@
       background: rgba(10, 10, 40, 0.85);
       border-radius: 28px;
       padding: 42px 56px;
-      width: 400px;
+      width: 420px;
       box-shadow:
-        0 0 60px #72d6ffaa,
-        inset 0 0 40px #3bbaff66;
-      backdrop-filter: blur(20px);
-      border: 2px solid #72d6ff55;
+        0 0 80px #7cfffaaa,
+        inset 0 0 40px #3bbaff88;
+      backdrop-filter: blur(24px);
+      border: 2.5px solid #7cfffa55;
       z-index: 11;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
 
     input, button {
       font-family: 'Share Tech Mono', monospace;
-      font-size: 17px;
-      border-radius: 16px;
+      font-size: 20px;
+      border-radius: 20px;
       border: none;
-      padding: 18px 22px;
-      color: #ccf6ff;
-      background: rgba(114, 214, 255, 0.18);
+      padding: 20px 26px;
+      color: #d0f9ff;
+      background: rgba(124, 255, 250, 0.15);
       box-shadow:
-        0 0 12px #3bbaff,
-        inset 0 0 20px #64bfff;
-      text-shadow: 0 0 3px #3bbaff;
+        0 0 18px #0bf2f8,
+        inset 0 0 28px #21cdf4;
+      text-shadow: 0 0 5px #0bf2f8;
       transition: all 0.3s ease;
       user-select: text;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.07em;
     }
 
     input::placeholder {
-      color: #90d6ffaa;
+      color: #90e5f5cc;
       font-style: italic;
     }
 
     input:focus {
       outline: none;
-      background: rgba(114, 214, 255, 0.38);
+      background: rgba(124, 255, 250, 0.35);
       box-shadow:
-        0 0 30px #2f97ff,
+        0 0 38px #2af4ff,
         inset 0 0 40px #3bbaff;
-      transform: scale(1.05);
+      transform: scale(1.07);
     }
 
     button {
-      font-weight: 700;
+      font-weight: 900;
       cursor: pointer;
-      background: linear-gradient(135deg, #72d6ff, #004a8c);
+      background: linear-gradient(135deg, #7cfffa, #00bcd4);
       box-shadow:
-        0 0 40px #72d6ff,
-        inset 0 0 65px #107bde;
-      text-shadow: 0 0 8px #9fdfff;
-      letter-spacing: 0.1em;
+        0 0 60px #7cfffa,
+        inset 0 0 80px #00a9c4;
+      text-shadow: 0 0 10px #1ff8ff;
+      letter-spacing: 0.13em;
       user-select: none;
       transition: all 0.25s ease;
     }
 
     button:hover {
-      background: linear-gradient(135deg, #004a8c, #72d6ff);
+      background: linear-gradient(135deg, #00bcd4, #7cfffa);
       box-shadow:
-        0 0 60px #107bde,
-        inset 0 0 90px #004a8c;
-      transform: scale(1.12);
+        0 0 80px #07e6ff,
+        inset 0 0 110px #0094af;
+      transform: scale(1.15);
     }
 
     /* Loader ring */
     #loader {
       display: none;
-      margin: 22px auto 0 auto;
-      border: 6px solid #05273c;
-      border-top: 6px solid #72d6ff;
+      margin: 24px auto 0 auto;
+      border: 7px solid #023343;
+      border-top: 7px solid #7cfffa;
       border-radius: 50%;
-      width: 46px;
-      height: 46px;
-      animation: spin 1.1s linear infinite;
+      width: 52px;
+      height: 52px;
+      animation: spin 1.2s linear infinite;
       z-index: 12;
     }
 
@@ -200,40 +201,40 @@
     /* Music control button */
     #music-toggle {
       position: fixed;
-      top: 22px;
-      right: 22px;
+      top: 24px;
+      right: 24px;
       background: transparent;
-      border: 2.5px solid #72d6ff;
+      border: 3px solid #7cfffa;
       border-radius: 50%;
-      width: 46px;
-      height: 46px;
-      color: #72d6ff;
-      font-size: 24px;
+      width: 52px;
+      height: 52px;
+      color: #7cfffa;
+      font-size: 28px;
       cursor: pointer;
-      box-shadow: 0 0 20px #72d6ff;
+      box-shadow: 0 0 25px #7cfffa;
       user-select: none;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: all 0.35s ease;
-      z-index: 20;
+      z-index: 21;
     }
 
     #music-toggle.playing {
-      background: #72d6ff;
-      color: #001832;
-      box-shadow: 0 0 40px #3bbaff;
+      background: #7cfffa;
+      color: #002222;
+      box-shadow: 0 0 55px #1affff;
     }
 
     /* Footer */
     p {
-      margin-top: 32px;
-      font-size: 14px;
-      color: #94cfffbb;
+      margin-top: 34px;
+      font-size: 16px;
+      color: #94e6ffcc;
       user-select: none;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       text-align: center;
-      z-index: 10;
+      z-index: 11;
       font-family: 'Share Tech Mono', monospace;
     }
   </style>
@@ -243,7 +244,7 @@
   <canvas id="bgCanvas"></canvas>
 
   <h1>Vern Share Booster</h1>
-  <h2>Explosive Anime Cyberpunk</h2>
+  <h2>Ultra Anime Vibes</h2>
 
   <div class="panel">
     <input type="text" placeholder="Enter your FB Token..." id="token" autocomplete="off" />
@@ -259,7 +260,7 @@
   <audio id="bgMusic" loop src="https://cdn.pixabay.com/download/audio/2022/03/01/audio_04a7d81f08.mp3?filename=cyberpunk-background-ambient-12344.mp3"></audio>
 
   <script>
-    // Canvas background animation (neon drifting lines & glowing particles)
+    // Canvas background: colorful flowing waves + sakura petals
     const canvas = document.getElementById('bgCanvas');
     const ctx = canvas.getContext('2d');
     let w, h;
@@ -273,124 +274,144 @@
     window.addEventListener('resize', resize);
     resize();
 
-    // Neon streaks
-    class Streak {
+    // Sakura petals class
+    class Petal {
       constructor() {
         this.reset();
       }
       reset() {
         this.x = Math.random() * w;
-        this.y = Math.random() * h;
-        this.len = 80 + Math.random() * 80;
-        this.speed = 0.3 + Math.random() * 0.6;
-        this.angle = Math.random() * Math.PI * 2;
-        this.opacity = 0.1 + Math.random() * 0.4;
-        this.color = `hsl(${200 + Math.random() * 60}, 80%, 70%)`;
+        this.y = Math.random() * -h;
+        this.size = 10 + Math.random() * 18;
+        this.speedY = 0.5 + Math.random() * 1.1;
+        this.speedX = 0.3 + Math.random() * 0.7;
+        this.angle = Math.random() * 2 * Math.PI;
+        this.angleSpeed = 0.01 + Math.random() * 0.02;
+        this.opacity = 0.2 + Math.random() * 0.5;
       }
       update() {
-        this.x += Math.cos(this.angle) * this.speed;
-        this.y += Math.sin(this.angle) * this.speed;
-        this.opacity += (Math.random() - 0.5) * 0.03;
-        if(this.opacity > 0.6) this.opacity = 0.6;
-        if(this.opacity < 0.05) this.opacity = 0.05;
-
-        if(this.x > w + this.len || this.x < -this.len || this.y > h + this.len || this.y < -this.len) {
-          this.reset();
-          this.x = this.x < 0 ? w + this.len : -this.len;
-          this.y = Math.random() * h;
-        }
+        this.y += this.speedY;
+        this.x += Math.sin(this.angle) * this.speedX;
+        this.angle += this.angleSpeed;
+        if(this.y > h + this.size) this.reset();
+        if(this.x > w + this.size) this.x = -this.size;
+        if(this.x < -this.size) this.x = w + this.size;
       }
       draw() {
-        ctx.strokeStyle = this.color;
-        ctx.globalAlpha = this.opacity;
-        ctx.lineWidth = 2;
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(Math.sin(this.angle) * 0.3);
+        ctx.fillStyle = `rgba(255, 182, 193, ${this.opacity})`;
+        ctx.shadowColor = 'rgba(255, 182, 193, 0.9)';
+        ctx.shadowBlur = 12;
         ctx.beginPath();
-        ctx.moveTo(this.x, this.y);
-        ctx.lineTo(this.x + Math.cos(this.angle) * this.len, this.y + Math.sin(this.angle) * this.len);
-        ctx.shadowColor = this.color;
-        ctx.shadowBlur = 15;
-        ctx.stroke();
-        ctx.globalAlpha = 1;
-      }
-    }
-
-    // Glow particles
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-      reset() {
-        this.x = Math.random() * w;
-        this.y = Math.random() * h;
-        this.size = 1 + Math.random() * 2;
-        this.speed = 0.15 + Math.random() * 0.25;
-        this.angle = Math.random() * Math.PI * 2;
-        this.color = `hsl(${190 + Math.random() * 70}, 80%, 80%)`;
-        this.opacity = 0.1 + Math.random() * 0.4;
-      }
-      update() {
-        this.x += Math.cos(this.angle) * this.speed;
-        this.y += Math.sin(this.angle) * this.speed;
-        this.opacity += (Math.random() - 0.5) * 0.02;
-        if(this.opacity > 0.6) this.opacity = 0.6;
-        if(this.opacity < 0.05) this.opacity = 0.05;
-
-        if(this.x > w || this.x < 0) this.angle = Math.PI - this.angle;
-        if(this.y > h || this.y < 0) this.angle = -this.angle;
-      }
-      draw() {
-        ctx.fillStyle = this.color;
-        ctx.globalAlpha = this.opacity;
-        ctx.shadowColor = this.color;
-        ctx.shadowBlur = 10;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        ctx.moveTo(0, 0);
+        ctx.bezierCurveTo(5, -5, 10, -5, 10, 0);
+        ctx.bezierCurveTo(10, 5, 5, 5, 0, 0);
+        ctx.closePath();
         ctx.fill();
-        ctx.globalAlpha = 1;
+        ctx.restore();
       }
     }
 
-    const streaks = [];
-    const particles = [];
-    for(let i = 0; i < 25; i++) streaks.push(new Streak());
-    for(let i = 0; i < 150; i++) particles.push(new Particle());
+    // Flowing wave class
+    class Wave {
+      constructor(y, amplitude, wavelength, speed, hue) {
+        this.y = y;
+        this.amplitude = amplitude;
+        this.wavelength = wavelength;
+        this.speed = speed;
+        this.hue = hue;
+        this.phase = 0;
+      }
+      update() {
+        this.phase += this.speed;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.moveTo(0, this.y);
+        for(let x = 0; x <= w; x++) {
+          const y = this.y + Math.sin((x / this.wavelength) * 2 * Math.PI + this.phase) * this.amplitude;
+          ctx.lineTo(x, y);
+        }
+        ctx.lineTo(w, h);
+        ctx.lineTo(0, h);
+        ctx.closePath();
 
-    function animate() {
+        const gradient = ctx.createLinearGradient(0, this.y - this.amplitude, 0, this.y + this.amplitude);
+        gradient.addColorStop(0, `hsla(${this.hue}, 80%, 70%, 0.7)`);
+        gradient.addColorStop(1, `hsla(${this.hue}, 70%, 50%, 0.2)`);
+
+        ctx.fillStyle = gradient;
+        ctx.fill();
+      }
+    }
+
+    const petals = [];
+    const petalCount = 80;
+    for(let i=0; i<petalCount; i++) petals.push(new Petal());
+
+    const waves = [
+      new Wave(h * 0.6, 45, 250, 0.013, 320),
+      new Wave(h * 0.75, 25, 150, 0.021, 290),
+      new Wave(h * 0.85, 12, 90, 0.015, 270),
+    ];
+
+    function animateBg() {
       ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = 'rgba(0,0,0,0.15)';
+      ctx.fillStyle = '#000';
       ctx.fillRect(0, 0, w, h);
 
-      streaks.forEach(s => {
-        s.update();
-        s.draw();
+      waves.forEach(wave => {
+        wave.update();
+        wave.draw();
       });
 
-      particles.forEach(p => {
-        p.update();
-        p.draw();
+      petals.forEach(petal => {
+        petal.update();
+        petal.draw();
       });
 
-      requestAnimationFrame(animate);
+      requestAnimationFrame(animateBg);
     }
-    animate();
+    animateBg();
 
-    // Music control logic
+    // Music control
     const musicBtn = document.getElementById('music-toggle');
     const bgMusic = document.getElementById('bgMusic');
     let playing = false;
 
+    // Try autoplay after user interaction, fallback to toggle
+    function tryPlayMusic() {
+      bgMusic.play().then(() => {
+        playing = true;
+        musicBtn.textContent = '🔊';
+        musicBtn.classList.add('playing');
+      }).catch(() => {
+        // Autoplay blocked
+        playing = false;
+        musicBtn.textContent = '▶️';
+        musicBtn.classList.remove('playing');
+      });
+    }
+
     musicBtn.addEventListener('click', () => {
-      if(playing) {
+      if (playing) {
         bgMusic.pause();
+        playing = false;
         musicBtn.textContent = '▶️';
         musicBtn.classList.remove('playing');
       } else {
         bgMusic.play();
+        playing = true;
         musicBtn.textContent = '🔊';
         musicBtn.classList.add('playing');
       }
-      playing = !playing;
     });
+
+    // Attempt autoplay on any user interaction
+    window.addEventListener('click', tryPlayMusic, {once: true});
+    window.addEventListener('keydown', tryPlayMusic, {once: true});
 
     // Boost button logic
     const boostBtn = document.getElementById('boost-btn');
@@ -400,7 +421,7 @@
       const token = document.getElementById('token').value.trim();
       const message = document.getElementById('message').value.trim();
 
-      if(!token || !message) {
+      if (!token || !message) {
         alert('Please enter both token and message!');
         return;
       }
@@ -408,14 +429,12 @@
       boostBtn.disabled = true;
       loader.style.display = 'block';
 
-      // Simulate async action (replace with your API call)
       setTimeout(() => {
         loader.style.display = 'none';
         boostBtn.disabled = false;
         alert('Shares boosted successfully! 🌸');
-      }, 3200);
+      }, 3500);
     });
-
   </script>
 </body>
 </html>
