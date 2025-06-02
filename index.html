@@ -3,41 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <title>Vern Share Booster!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins&family=Major+Mono+Display&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      user-select: none;
     }
     body {
-      background: radial-gradient(circle, #000000, #0a0a0a, #1a1a1a);
-      color: #ffffff;
-      text-align: center;
-      min-height: 100vh;
+      background: #000;
+      overflow: hidden;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      color: #00fff7;
+      position: relative;
       padding: 20px;
     }
+
+    /* Animated Gradient Background with subtle noise */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(270deg, #00fff7, #0ff, #006666, #001f2d);
+      background-size: 800% 800%;
+      animation: bgGradient 30s ease infinite;
+      filter: brightness(0.7);
+      z-index: -3;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://www.transparenttextures.com/patterns/noise.png');
+      opacity: 0.1;
+      z-index: -2;
+      pointer-events: none;
+    }
+    @keyframes bgGradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* Main titles with glitch and neon glow */
     h1, h2 {
       font-family: 'Orbitron', sans-serif;
-      color: #0ff;
-      text-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+      font-weight: 700;
+      color: #00fff7;
+      position: relative;
+      margin-bottom: 0.2em;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      text-shadow:
+        0 0 8px #00fff7,
+        0 0 15px #00fff7,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
       animation: floatText 4s ease-in-out infinite;
-      font-weight: 600;
-      margin-bottom: 0.3em;
     }
     h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
+      letter-spacing: 0.3em;
+      animation-delay: 0s;
+      filter: drop-shadow(0 0 3px #00fff7);
     }
     h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5em;
+      font-size: 2.5rem;
+      animation-delay: 1s;
+      color: #0ff;
+      filter: drop-shadow(0 0 4px #0ff);
     }
+
+    /* Glitch effect on h1 */
+    h1::before,
+    h1::after {
+      content: "⚡ FACEBOOK SHARE";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      opacity: 0.8;
+      clip: rect(0, 900px, 0, 0);
+    }
+    h1::before {
+      animation: glitchTop 2s infinite linear alternate-reverse;
+      color: #0ff;
+      z-index: -1;
+    }
+    h1::after {
+      animation: glitchBottom 3s infinite linear alternate-reverse;
+      color: #00fff7;
+      z-index: -1;
+    }
+    @keyframes glitchTop {
+      0% {
+        clip: rect(0, 9999px, 5px, 0);
+        transform: translate(-3px, -2px);
+      }
+      20% {
+        clip: rect(10px, 9999px, 15px, 0);
+        transform: translate(3px, 2px);
+      }
+      40% {
+        clip: rect(5px, 9999px, 10px, 0);
+        transform: translate(-3px, 1px);
+      }
+      60% {
+        clip: rect(8px, 9999px, 12px, 0);
+        transform: translate(2px, -1px);
+      }
+      80% {
+        clip: rect(3px, 9999px, 8px, 0);
+        transform: translate(-2px, 1px);
+      }
+      100% {
+        clip: rect(0, 9999px, 5px, 0);
+        transform: translate(0, 0);
+      }
+    }
+    @keyframes glitchBottom {
+      0% {
+        clip: rect(20px, 9999px, 25px, 0);
+        transform: translate(3px, 2px);
+      }
+      20% {
+        clip: rect(15px, 9999px, 20px, 0);
+        transform: translate(-3px, -2px);
+      }
+      40% {
+        clip: rect(18px, 9999px, 23px, 0);
+        transform: translate(2px, 1px);
+      }
+      60% {
+        clip: rect(19px, 9999px, 24px, 0);
+        transform: translate(-2px, -1px);
+      }
+      80% {
+        clip: rect(16px, 9999px, 21px, 0);
+        transform: translate(1px, 1px);
+      }
+      100% {
+        clip: rect(20px, 9999px, 25px, 0);
+        transform: translate(0, 0);
+      }
+    }
+
     @keyframes floatText {
       0%, 100% {
         transform: translateY(0);
@@ -46,6 +161,8 @@
         transform: translateY(-10px);
       }
     }
+
+    /* Inputs and buttons */
     input, button {
       padding: 16px 24px;
       margin: 10px 0;
@@ -54,46 +171,63 @@
       width: 280px;
       font-size: 18px;
       transition: 0.3s ease;
-      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-      background-color: #111;
-      color: #0ff;
+      box-shadow:
+        0 0 10px #00fff7,
+        0 0 25px #00fff7;
+      background-color: #001f2d;
+      color: #00fff7;
+      font-weight: 600;
+      font-family: 'Major Mono Display', monospace;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
     input:focus {
       outline: none;
-      box-shadow: 0 0 20px #0ff;
+      box-shadow:
+        0 0 30px #00fff7,
+        0 0 40px #00fff7;
       transform: scale(1.05);
+      background-color: #004d66;
     }
     button {
-      background-color: #000;
-      animation: pulse 2s infinite;
+      background-color: transparent;
       cursor: pointer;
-      font-weight: 600;
+      animation: pulse 2.5s infinite alternate;
+      border: 2px solid #00fff7;
     }
     button:hover {
-      background: #0ff;
+      background: #00fff7;
       color: #000;
       transform: scale(1.1);
+      box-shadow:
+        0 0 40px #00fff7,
+        0 0 70px #00fff7;
     }
     @keyframes pulse {
       0% {
-        box-shadow: 0 0 10px #0ff;
-      }
-      50% {
-        box-shadow: 0 0 25px #0ff, 0 0 50px #0ff;
+        box-shadow:
+          0 0 10px #00fff7,
+          0 0 20px #00fff7;
       }
       100% {
-        box-shadow: 0 0 10px #0ff;
+        box-shadow:
+          0 0 30px #00fff7,
+          0 0 60px #00fff7;
       }
     }
+
+    /* Scrolling footer text */
     p {
       margin-top: 30px;
       font-size: 16px;
-      color: #888;
-      max-width: 500px;
-      animation: scrollText 20s linear infinite;
+      color: #009999;
+      max-width: 600px;
+      animation: scrollText 25s linear infinite;
       white-space: nowrap;
       overflow: hidden;
       user-select: none;
+      font-style: italic;
+      letter-spacing: 0.1em;
     }
     @keyframes scrollText {
       0% {
@@ -103,33 +237,40 @@
         transform: translateX(-100%);
       }
     }
+
+    /* Particle bubbles floating upwards */
     .particle {
-      position: absolute;
-      background: #0ff;
+      position: fixed;
+      background: linear-gradient(45deg, #00fff7, #006666);
       border-radius: 50%;
-      opacity: 0.15;
+      opacity: 0.12;
       animation: floatParticle linear infinite;
+      pointer-events: none;
+      filter: drop-shadow(0 0 3px #00fff7);
+      z-index: -1;
     }
     @keyframes floatParticle {
       0% {
-        transform: translateY(0);
-        opacity: 0.15;
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0.12;
       }
       100% {
-        transform: translateY(-100vh);
+        transform: translateY(-10vh) scale(1.2);
         opacity: 0;
       }
     }
+
+    /* Loader spinner */
     #loader {
       display: none;
       margin-top: 20px;
-      border: 6px solid #111;
-      border-top: 6px solid #0ff;
+      border: 6px solid #001f2d;
+      border-top: 6px solid #00fff7;
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      animation: spin 1s linear infinite;
-      z-index: 3;
+      animation: spin 1.2s linear infinite;
+      z-index: 10;
     }
     @keyframes spin {
       0% {
@@ -139,51 +280,133 @@
         transform: rotate(360deg);
       }
     }
+
+    /* Music controls styling */
     #musicControls {
       margin-top: 25px;
-      user-select: none;
-      color: #0ff;
+      color: #00fff7;
+      font-family: 'Major Mono Display', monospace;
+      display: flex;
+      gap: 15px;
     }
     #musicControls button {
       background: transparent;
-      border: 2px solid #0ff;
+      border: 2px solid #00fff7;
       border-radius: 12px;
       padding: 10px 20px;
-      color: #0ff;
+      color: #00fff7;
       font-size: 16px;
       cursor: pointer;
       transition: 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
     }
-    #musicControls button:hover {
-      background: #0ff;
+    #musicControls button:hover:not(:disabled) {
+      background: #00fff7;
       color: #000;
+      box-shadow:
+        0 0 10px #00fff7,
+        0 0 20px #00fff7;
+    }
+    #musicControls button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    /* Moving glowing "VERN" banner */
+    #vernMover {
+      position: fixed;
+      top: 10vh;
+      left: 100%;
+      font-family: 'Orbitron', monospace;
+      font-size: 4rem;
+      font-weight: 900;
+      color: #00fff7;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      text-shadow:
+        0 0 10px #00fff7,
+        0 0 20px #00fff7,
+        0 0 40px #0ff,
+        0 0 80px #0ff;
+      white-space: nowrap;
+      animation: moveVern 15s linear infinite;
+      pointer-events: none;
+      user-select: none;
+      z-index: 9999;
+    }
+    /* Neon flicker effect for "VERN" */
+    #vernMover::before,
+    #vernMover::after {
+      content: "VERN";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      filter: blur(6px);
+      animation: flicker 3s infinite ease-in-out alternate;
+    }
+    #vernMover::after {
+      filter: blur(15px);
+      animation-delay: 1.5s;
+    }
+    @keyframes moveVern {
+      0% {
+        left: 100%;
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        left: -20%;
+        opacity: 1;
+      }
+      100% {
+        left: -20%;
+        opacity: 0;
+      }
+    }
+    @keyframes flicker {
+      0%, 100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.7;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Moving "VERN" -->
+  <div id="vernMover">VERN</div>
+
   <!-- Particles -->
   <script>
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 35; i++) {
       const particle = document.createElement('div');
       particle.className = 'particle';
-      const size = Math.random() * 4 + 2;
+      const size = Math.random() * 6 + 3;
       particle.style.width = `${size}px`;
       particle.style.height = `${size}px`;
       particle.style.left = `${Math.random() * 100}%`;
       particle.style.top = `${Math.random() * 100 + 100}%`;
-      particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+      particle.style.animationDuration = `${Math.random() * 25 + 20}s`;
+      particle.style.animationDelay = `${Math.random() * -25}s`;
       document.body.appendChild(particle);
     }
   </script>
 
-  <!-- Title -->
+  <!-- Titles -->
   <h1>⚡ FACEBOOK SHARE</h1>
   <h2>🧠 VERN BOOSTER</h2>
 
   <!-- Inputs -->
-  <input type="text" id="link" placeholder="Post link" required /><br />
-  <input type="number" id="limit" placeholder="Enter a limit" required /><br />
+  <input type="text" id="link" placeholder="Post link" required autocomplete="off" /><br />
+  <input type="number" id="limit" placeholder="Enter a limit" required min="1" autocomplete="off" /><br />
   <button onclick="shareNow()">Share now</button>
 
   <!-- Loader -->
@@ -231,8 +454,8 @@
       const link = document.getElementById("link").value.trim();
       const limit = document.getElementById("limit").value.trim();
 
-      if (!link || !limit) {
-        alert("Please fill out both fields.");
+      if (!link || !limit || isNaN(limit) || limit < 1) {
+        alert("Please fill out both fields correctly.");
         return;
       }
 
