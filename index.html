@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <title>🌸 Vern Share Booster - Anime Edition</title>
+  <title>🌸 Vern Share Booster - Anime Aesthetic</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Kaushan+Script&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   <style>
     /* Reset */
@@ -16,8 +16,8 @@
     body {
       height: 100vh;
       overflow: hidden;
-      background: radial-gradient(circle at center, #0b0c1a, #000000 90%);
-      color: #99eeff;
+      background: linear-gradient(180deg, #1b0e2b 0%, #0a0a14 90%);
+      color: #a2d4ff;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -26,175 +26,188 @@
       user-select: none;
     }
 
-    /* Background subtle grid */
+    /* Neon city silhouette - subtle glowing lines */
     body::before {
       content: '';
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background:
-        linear-gradient(rgba(153, 238, 255, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(153, 238, 255, 0.06) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 120px;
+      background: 
+        linear-gradient(to top, #240042cc 0%, transparent 90%),
+        url('https://i.imgur.com/2xGxZNh.png') no-repeat bottom center;
+      background-size: cover;
+      filter: drop-shadow(0 0 10px #6f42c1cc);
       z-index: 0;
-      filter: brightness(0.7);
+      pointer-events: none;
     }
 
-    /* Anime brush styled Title */
+    /* Title with anime brush font */
     h1 {
       font-family: 'Kaushan Script', cursive;
-      font-size: 2.4rem;
-      color: #ff8ec4;
+      font-size: 2.6rem;
+      color: #ff9cd9;
       text-shadow:
-        0 0 15px #ff5fa3,
-        0 0 25px #ff1a75,
-        0 0 40px #ff004c;
-      margin-bottom: 5px;
+        0 0 12px #ff6fcf,
+        0 0 30px #d6277e;
+      margin-bottom: 10px;
       user-select: text;
-      animation: pulseAnime 3.5s ease-in-out infinite;
-      letter-spacing: 0.1em;
-      z-index: 2;
+      letter-spacing: 0.12em;
+      animation: pulseAnime 3.8s ease-in-out infinite;
+      z-index: 10;
+      text-align: center;
     }
 
     h2 {
       font-family: 'Orbitron', sans-serif;
       font-weight: 600;
-      font-size: 1.4rem;
-      color: #66ccff;
+      font-size: 1.5rem;
+      color: #72d6ff;
       text-shadow:
-        0 0 12px #33aaff,
-        0 0 20px #0088cc;
-      margin-bottom: 30px;
+        0 0 15px #44b3ff,
+        0 0 35px #107bde;
+      margin-bottom: 40px;
       user-select: text;
-      letter-spacing: 0.12em;
-      animation: pulseGlow 4s ease-in-out infinite;
-      z-index: 2;
+      letter-spacing: 0.15em;
+      animation: pulseGlow 4.5s ease-in-out infinite;
+      z-index: 10;
+      text-align: center;
     }
 
     @keyframes pulseAnime {
       0%, 100% {
         text-shadow:
-          0 0 15px #ff5fa3,
-          0 0 25px #ff1a75,
-          0 0 40px #ff004c;
+          0 0 12px #ff6fcf,
+          0 0 30px #d6277e;
       }
       50% {
         text-shadow:
-          0 0 25px #ff1a75,
-          0 0 40px #ff004c,
-          0 0 60px #ff8ec4;
+          0 0 25px #d6277e,
+          0 0 40px #ff9cd9;
       }
     }
 
     @keyframes pulseGlow {
       0%, 100% {
         text-shadow:
-          0 0 12px #33aaff,
-          0 0 20px #0088cc;
+          0 0 15px #44b3ff,
+          0 0 35px #107bde;
       }
       50% {
         text-shadow:
-          0 0 20px #0088cc,
-          0 0 30px #005577;
+          0 0 25px #107bde,
+          0 0 45px #004a8c;
       }
     }
 
     /* Glassy input panel */
     .panel {
-      background: rgba(20, 20, 40, 0.85);
-      border-radius: 18px;
-      padding: 38px 48px;
+      background: rgba(10, 5, 30, 0.82);
+      border-radius: 20px;
+      padding: 40px 50px;
       box-shadow:
-        0 0 25px rgba(255, 110, 170, 0.25),
-        inset 0 0 40px rgba(255, 110, 170, 0.12);
-      width: 320px;
-      backdrop-filter: blur(16px);
-      border: 1.5px solid rgba(255, 110, 170, 0.3);
-      z-index: 3;
+        0 0 30px rgba(114, 214, 255, 0.25),
+        inset 0 0 50px rgba(114, 214, 255, 0.12);
+      width: 360px;
+      backdrop-filter: blur(22px);
+      border: 1.8px solid rgba(114, 214, 255, 0.35);
+      z-index: 11;
       user-select: none;
+      position: relative;
     }
 
     /* Inputs and button */
     input, button {
       width: 100%;
-      padding: 14px 18px;
-      margin: 14px 0;
+      padding: 16px 22px;
+      margin: 16px 0;
       border: none;
-      border-radius: 14px;
-      font-size: 16px;
-      background: rgba(255, 110, 170, 0.12);
-      color: #ffd2e6;
+      border-radius: 16px;
+      font-size: 17px;
+      background: rgba(114, 214, 255, 0.12);
+      color: #d0f0ff;
       box-shadow:
-        0 0 10px #ff69b4,
-        inset 0 0 15px #ff4c8b;
-      transition: all 0.3s ease;
+        0 0 15px #4eb1ff,
+        inset 0 0 18px #81c7ff;
+      transition: all 0.35s ease;
       font-family: 'Share Tech Mono', monospace;
       user-select: text;
+      letter-spacing: 0.03em;
+      text-shadow: 0 0 2px #4eb1ff;
+      animation: pixelShimmer 3.5s linear infinite;
+      backdrop-filter: brightness(1.2);
     }
 
     input::placeholder {
-      color: #ff9dc7cc;
+      color: #9bcafcaa;
       font-style: italic;
     }
 
     input:focus {
       outline: none;
-      background: rgba(255, 110, 170, 0.3);
+      background: rgba(114, 214, 255, 0.3);
       box-shadow:
-        0 0 25px #ff4c8b,
-        inset 0 0 30px #ff1a57;
+        0 0 40px #2a94ff,
+        inset 0 0 35px #3a9fff;
       transform: scale(1.05);
+      animation-play-state: paused;
     }
 
     button {
       cursor: pointer;
       font-weight: 700;
-      background: linear-gradient(135deg, #ff69b4, #d81e5b);
+      background: linear-gradient(135deg, #72d6ff, #004a8c);
       box-shadow:
-        0 0 25px #ff5a8a,
-        0 0 50px #d81e5b,
-        inset 0 0 60px #ff1a57;
-      color: #fff0f6;
+        0 0 35px #72d6ff,
+        inset 0 0 65px #107bde;
+      color: #dbf2ff;
       user-select: none;
-      animation: pulseButton 2.8s ease-in-out infinite;
-      letter-spacing: 0.06em;
+      animation: pulseButton 3.2s ease-in-out infinite;
+      letter-spacing: 0.07em;
+      text-shadow: 0 0 6px #9fdfff;
+      font-family: 'Orbitron', monospace;
     }
 
     button:hover {
-      background: linear-gradient(135deg, #d81e5b, #ff69b4);
-      transform: scale(1.12);
+      background: linear-gradient(135deg, #004a8c, #72d6ff);
+      transform: scale(1.13);
       box-shadow:
-        0 0 40px #ff1a57,
-        0 0 70px #ff4c8b,
-        inset 0 0 80px #d81e5b;
+        0 0 50px #107bde,
+        inset 0 0 85px #004a8c;
+      animation-play-state: paused;
     }
 
     @keyframes pulseButton {
       0%, 100% {
         box-shadow:
-          0 0 25px #ff5a8a,
-          0 0 50px #d81e5b,
-          inset 0 0 60px #ff1a57;
+          0 0 35px #72d6ff,
+          inset 0 0 65px #107bde;
       }
       50% {
         box-shadow:
-          0 0 45px #ff1a57,
-          0 0 70px #ff4c8b,
-          inset 0 0 80px #d81e5b;
+          0 0 60px #107bde,
+          inset 0 0 90px #004a8c;
       }
+    }
+
+    @keyframes pixelShimmer {
+      0% { filter: brightness(1.1); }
+      50% { filter: brightness(1.3) saturate(1.2); }
+      100% { filter: brightness(1.1); }
     }
 
     /* Loader ring */
     #loader {
       display: none;
-      margin: 20px auto 0 auto;
-      border: 5px solid #3a0029;
-      border-top: 5px solid #ff5a8a;
+      margin: 22px auto 0 auto;
+      border: 5px solid #05273c;
+      border-top: 5px solid #72d6ff;
       border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      animation: spin 1s linear infinite;
-      z-index: 10;
+      width: 40px;
+      height: 40px;
+      animation: spin 1.3s linear infinite;
+      z-index: 12;
     }
 
     @keyframes spin {
@@ -204,27 +217,29 @@
 
     /* Footer */
     p {
-      margin-top: 38px;
-      font-size: 13px;
-      color: #ffaad0bb;
+      margin-top: 42px;
+      font-size: 14px;
+      color: #94cfffbb;
       user-select: none;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
+      text-align: center;
+      z-index: 10;
     }
 
     /* Neon spark particles */
     .spark {
       position: absolute;
-      background: #ff69b4;
+      background: #72d6ff;
       box-shadow:
-        0 0 12px #ff69b4,
-        0 0 25px #d81e5b,
-        0 0 40px #ff1a57;
+        0 0 15px #72d6ff,
+        0 0 30px #107bde,
+        0 0 50px #004a8c;
       border-radius: 50%;
       opacity: 0.3;
       pointer-events: none;
       animation: floatUp linear infinite;
-      z-index: 1;
-      filter: drop-shadow(0 0 5px #ff69b4);
+      z-index: 9;
+      filter: drop-shadow(0 0 8px #72d6ff);
     }
 
     @keyframes floatUp {
@@ -233,7 +248,7 @@
         opacity: 0.3;
       }
       100% {
-        transform: translateY(-120vh) scale(0.5);
+        transform: translateY(-110vh) scale(0.5);
         opacity: 0;
       }
     }
@@ -244,23 +259,23 @@
       top: -40px;
       width: 20px;
       height: 20px;
-      background: radial-gradient(circle at 50% 50%, #ffaad0dd, #d81e5bdd);
-      border-radius: 40% 60% 70% 30% / 50% 60% 40% 50%;
-      filter: drop-shadow(0 0 5px #ff69b4cc);
+      background: radial-gradient(circle at 50% 50%, #ff9cd9cc, #d6277ecc);
+      border-radius: 45% 55% 65% 35% / 55% 60% 40% 45%;
+      filter: drop-shadow(0 0 8px #d6277eaa);
       opacity: 0.75;
       animation: fallPetal linear infinite;
       pointer-events: none;
-      z-index: 1;
+      z-index: 8;
       transform-origin: center;
     }
 
     @keyframes fallPetal {
       0% {
         transform: translateX(0) translateY(0) rotate(0deg);
-        opacity: 0.8;
+        opacity: 0.9;
       }
       100% {
-        transform: translateX(100vw) translateY(110vh) rotate(360deg);
+        transform: translateX(120vw) translateY(105vh) rotate(360deg);
         opacity: 0;
       }
     }
@@ -271,14 +286,14 @@
       top: 18px;
       right: 18px;
       background: transparent;
-      border: 2px solid #ff69b4;
+      border: 2px solid #72d6ff;
       border-radius: 50%;
-      width: 38px;
-      height: 38px;
-      color: #ff69b4;
+      width: 40px;
+      height: 40px;
+      color: #72d6ff;
       font-size: 22px;
       cursor: pointer;
-      box-shadow: 0 0 10px #ff69b4;
+      box-shadow: 0 0 15px #72d6ff;
       user-select: none;
       transition: background 0.3s, color 0.3s;
       z-index: 50;
@@ -288,9 +303,20 @@
     }
 
     #music-toggle.playing {
-      background: #ff69b4;
-      color: #fff0f6;
-      box-shadow: 0 0 30px #ff4c8b;
+      background: #72d6ff;
+      color: #001832;
+      box-shadow: 0 0 30px #3bbaff;
+    }
+
+    /* Hide default YouTube controls container */
+    #ytplayer {
+      position: fixed;
+      width: 1px; height: 1px;
+      bottom: 0; left: 0;
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
+      z-index: -1;
     }
 
   </style>
@@ -298,7 +324,7 @@
 <body>
 
   <h1>Vern Share Booster</h1>
-  <h2>Anime Edition</h2>
+  <h2>Anime Aesthetic</h2>
 
   <div class="panel">
     <input type="text" placeholder="Enter your FB Token..." id="token" autocomplete="off" />
@@ -311,7 +337,14 @@
 
   <button id="music-toggle" title="Toggle Music">▶️</button>
 
-  <audio id="bg-music" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/07/31/audio_9fbd84d0d0.mp3?filename=happy-anime-theme-11257.mp3"></audio>
+  <!-- YouTube Player iframe -->
+  <iframe
+    id="ytplayer"
+    src="https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&loop=1&playlist=5qap5aO4i9A&controls=0&mute=1&modestbranding=1&iv_load_policy=3&disablekb=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+  ></iframe>
 
   <script>
     // Animate sakura petals
@@ -320,43 +353,48 @@
       const petal = document.createElement('div');
       petal.classList.add('petal');
       petal.style.left = Math.random() * 100 + 'vw';
-      petal.style.animationDuration = (8 + Math.random() * 6) + 's';
-      petal.style.animationDelay = (Math.random() * 15) + 's';
-      petal.style.width = (12 + Math.random() * 10) + 'px';
-      petal.style.height = (12 + Math.random() * 10) + 'px';
+      petal.style.animationDuration = (9 + Math.random() * 7) + 's';
+      petal.style.animationDelay = (Math.random() * 17) + 's';
+      petal.style.width = (14 + Math.random() * 12) + 'px';
+      petal.style.height = (14 + Math.random() * 12) + 'px';
       petal.style.opacity = 0.6 + Math.random() * 0.4;
       document.body.appendChild(petal);
     }
 
     // Add sparkles
-    const sparkCount = 25;
+    const sparkCount = 28;
     for(let i=0; i<sparkCount; i++) {
       const spark = document.createElement('div');
       spark.classList.add('spark');
       spark.style.left = Math.random() * 100 + 'vw';
       spark.style.top = Math.random() * 100 + 'vh';
-      const size = 6 + Math.random() * 14;
+      const size = 7 + Math.random() * 12;
       spark.style.width = size + 'px';
       spark.style.height = size + 'px';
-      spark.style.animationDuration = (4 + Math.random() * 5) + 's';
-      spark.style.animationDelay = (Math.random() * 6) + 's';
+      spark.style.animationDuration = (4 + Math.random() * 6) + 's';
+      spark.style.animationDelay = (Math.random() * 7) + 's';
       document.body.appendChild(spark);
     }
 
-    // Music toggle
+    // Music toggle control for iframe (mute/unmute)
     const musicBtn = document.getElementById('music-toggle');
-    const bgMusic = document.getElementById('bg-music');
+    const ytplayer = document.getElementById('ytplayer');
+
+    let isPlaying = true;
 
     musicBtn.addEventListener('click', () => {
-      if(bgMusic.paused) {
-        bgMusic.play();
-        musicBtn.textContent = '🔊';
-        musicBtn.classList.add('playing');
-      } else {
-        bgMusic.pause();
+      if (isPlaying) {
+        // Mute by hiding iframe src, workaround to stop audio
+        ytplayer.src = ytplayer.src.replace('&mute=1', '');
+        ytplayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
         musicBtn.textContent = '▶️';
         musicBtn.classList.remove('playing');
+      } else {
+        ytplayer.src = ytplayer.src.replace('&mute=0', '&mute=1');
+        musicBtn.textContent = '🔊';
+        musicBtn.classList.add('playing');
       }
+      isPlaying = !isPlaying;
     });
 
     // Button click loader effect
