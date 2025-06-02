@@ -3,115 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <title>Vern Share Booster!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Press+Start+2P&family=Zen+Dots&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-
     body {
-      background: radial-gradient(circle, #000000, #0a0a0a, #1a1a1a);
+      background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
+      background-size: 400% 400%;
+      animation: bgAnimate 20s ease infinite;
       color: #ffffff;
+      text-align: center;
       min-height: 100vh;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: 'Orbitron', sans-serif;
-      text-align: center;
+      overflow: hidden;
       padding: 20px;
     }
 
-    .vern-logo {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 4rem;
+    @keyframes bgAnimate {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1, h2 {
+      font-family: 'Orbitron', sans-serif;
       color: #0ff;
-      animation: pulseVern 3s ease-in-out infinite, rotateVern 10s linear infinite;
-      text-shadow: 0 0 10px #0ff, 0 0 30px #0ff, 0 0 50px #0ff;
-      margin-bottom: 10px;
-    }
-
-    @keyframes pulseVern {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-    }
-
-    @keyframes rotateVern {
-      0% {
-        transform: rotateY(0deg);
-      }
-      100% {
-        transform: rotateY(360deg);
-      }
+      text-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+      animation: floatText 4s ease-in-out infinite;
+      font-weight: 600;
+      margin-bottom: 0.3em;
     }
 
     h1 {
-      font-size: 2.5rem;
-      color: #0ff;
-      margin-bottom: 0.5em;
-      animation: glow 2s ease-in-out infinite;
-      text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
-    }
-
-    @keyframes glow {
-      0%, 100% {
-        text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
-      }
-      50% {
-        text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
-      }
+      font-size: 3.5rem;
+      animation: flicker 3s infinite alternate;
     }
 
     h2 {
-      font-size: 1.4rem;
-      color: #ccc;
-      margin-bottom: 30px;
-      animation: fadeInUp 3s ease-out infinite alternate;
+      font-size: 2rem;
+      margin-bottom: 1.5em;
+      position: relative;
+      animation: moveVern 5s linear infinite;
     }
 
-    @keyframes fadeInUp {
-      0% {
-        transform: translateY(5px);
-        opacity: 0.7;
-      }
-      100% {
-        transform: translateY(-5px);
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes moveVern {
+      0% { left: -100px; }
+      50% { left: 100px; }
+      100% { left: -100px; }
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0;
       }
     }
 
     input, button {
-      padding: 14px 22px;
+      padding: 16px 24px;
       margin: 10px 0;
       border: none;
       border-radius: 12px;
       width: 280px;
       font-size: 18px;
       transition: 0.3s ease;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
       background-color: #111;
       color: #0ff;
-      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-      font-family: 'Zen Dots', sans-serif;
     }
 
     input:focus {
       outline: none;
-      box-shadow: 0 0 25px #0ff;
+      box-shadow: 0 0 20px #0ff;
       transform: scale(1.05);
     }
 
     button {
       background-color: #000;
-      cursor: pointer;
       animation: pulse 2s infinite;
-      font-weight: bold;
+      cursor: pointer;
+      font-weight: 600;
     }
 
     button:hover {
@@ -121,14 +106,43 @@
     }
 
     @keyframes pulse {
+      0% { box-shadow: 0 0 10px #0ff; }
+      50% { box-shadow: 0 0 25px #0ff, 0 0 50px #0ff; }
+      100% { box-shadow: 0 0 10px #0ff; }
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #888;
+      max-width: 500px;
+      animation: scrollText 20s linear infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .particle {
+      position: absolute;
+      background: #0ff;
+      border-radius: 50%;
+      opacity: 0.15;
+      animation: floatParticle linear infinite;
+    }
+
+    @keyframes floatParticle {
       0% {
-        box-shadow: 0 0 10px #0ff;
-      }
-      50% {
-        box-shadow: 0 0 25px #0ff, 0 0 50px #0ff;
+        transform: translateY(0);
+        opacity: 0.15;
       }
       100% {
-        box-shadow: 0 0 10px #0ff;
+        transform: translateY(-100vh);
+        opacity: 0;
       }
     }
 
@@ -141,27 +155,12 @@
       width: 40px;
       height: 40px;
       animation: spin 1s linear infinite;
+      z-index: 3;
     }
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
-    }
-
-    p {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #888;
-      max-width: 500px;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: scrollText 20s linear infinite;
-      user-select: none;
-    }
-
-    @keyframes scrollText {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
     }
 
     #musicControls {
@@ -189,48 +188,85 @@
 </head>
 <body>
 
-  <div class="vern-logo">VERN</div>
-  <h1>⚡ FACEBOOK SHARE BOOSTER</h1>
-  <h2>🧠 Powered by Vern Technology</h2>
+  <!-- Particles -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      const size = Math.random() * 4 + 2;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100 + 100}%`;
+      particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+      document.body.appendChild(particle);
+    }
+  </script>
 
-  <input type="text" id="link" placeholder="Enter Facebook post link" required /><br />
-  <input type="number" id="limit" placeholder="Enter share limit" required /><br />
-  <button onclick="shareNow()">🚀 Share Now</button>
+  <!-- Title -->
+  <h1>⚡ FACEBOOK SHARE</h1>
+  <h2>🧠 <span style="color: #0ff; font-weight: bold;">V E R N</span> BOOSTER</h2>
 
+  <!-- Inputs -->
+  <input type="text" id="link" placeholder="Post link" required /><br />
+  <input type="number" id="limit" placeholder="Enter a limit" required /><br />
+  <button onclick="shareNow()">Share now</button>
+
+  <!-- Loader -->
   <div id="loader"></div>
 
+  <!-- Music Controls & YouTube -->
   <div id="musicControls">
     <button id="playMusicBtn">▶ Play Music</button>
     <button id="pauseMusicBtn" disabled>⏸ Pause Music</button>
   </div>
 
+  <div style="display: none;">
+    <iframe id="ytplayer" type="text/html" width="0" height="0"
+      src="https://www.youtube.com/embed/DQG5VtFftL0?enablejsapi=1&version=3&loop=1&playlist=DQG5VtFftL0"
+      frameborder="0" allow="autoplay" allowfullscreen></iframe>
+  </div>
+
+  <!-- Footer -->
   <p>This site is not for sale. Credits to @vern, the creator. If someone claims ownership, report them!</p>
 
+  <!-- Sound Effect -->
   <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/791/791-preview.mp3" preload="auto"></audio>
-  <audio id="bgMusic" loop src="https://cdn.pixabay.com/download/audio/2022/03/01/audio_04a7d81f08.mp3?filename=cyberpunk-background-ambient-12344.mp3" preload="auto"></audio>
 
+  <!-- Scripts -->
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
   <script>
+    let player;
     const sound = document.getElementById("clickSound");
     const loader = document.getElementById("loader");
-    const bgMusic = document.getElementById("bgMusic");
     const playBtn = document.getElementById("playMusicBtn");
     const pauseBtn = document.getElementById("pauseMusicBtn");
 
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player("ytplayer", {
+        events: { 'onReady': onPlayerReady }
+      });
+    }
+
+    function onPlayerReady() {
+      playBtn.disabled = false;
+    }
+
     playBtn.addEventListener("click", () => {
-      bgMusic.play().then(() => {
+      if (player && player.playVideo) {
+        player.playVideo();
         playBtn.disabled = true;
         pauseBtn.disabled = false;
-      }).catch(() => {
-        alert("Unable to play music automatically.");
-      });
+      }
     });
 
     pauseBtn.addEventListener("click", () => {
-      bgMusic.pause();
-      playBtn.disabled = false;
-      pauseBtn.disabled = true;
+      if (player && player.pauseVideo) {
+        player.pauseVideo();
+        playBtn.disabled = false;
+        pauseBtn.disabled = true;
+      }
     });
 
     function shareNow() {
@@ -273,5 +309,6 @@
       });
     }
   </script>
+
 </body>
 </html>
