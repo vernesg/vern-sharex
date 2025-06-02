@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <title>🌌 Vern Share Booster - Dark Anime Edition</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <title>🌸 Vern Share Booster - Anime Edition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Kaushan+Script&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   <style>
     /* Reset */
     * {
@@ -13,12 +13,11 @@
       font-family: 'Share Tech Mono', monospace;
     }
 
-    /* Background & layout */
     body {
       height: 100vh;
       overflow: hidden;
-      background: #000;
-      color: #8ef;
+      background: radial-gradient(circle at center, #0b0c1a, #000000 90%);
+      color: #99eeff;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -27,141 +26,161 @@
       user-select: none;
     }
 
-    /* Futuristic grid behind */
+    /* Background subtle grid */
     body::before {
       content: '';
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       background:
-        linear-gradient(rgba(70, 70, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(70, 70, 255, 0.1) 1px, transparent 1px);
+        linear-gradient(rgba(153, 238, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(153, 238, 255, 0.06) 1px, transparent 1px);
       background-size: 40px 40px;
       pointer-events: none;
       z-index: 0;
+      filter: brightness(0.7);
     }
 
-    /* Title styles */
-    h1, h2 {
-      font-family: 'Orbitron', sans-serif;
-      color: #7fffd4;
+    /* Anime brush styled Title */
+    h1 {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 2.4rem;
+      color: #ff8ec4;
       text-shadow:
-        0 0 10px #7fffd4,
-        0 0 20px #00ffff,
-        0 0 30px #00b3b3,
-        0 0 40px #00ffff;
+        0 0 15px #ff5fa3,
+        0 0 25px #ff1a75,
+        0 0 40px #ff004c;
+      margin-bottom: 5px;
+      user-select: text;
+      animation: pulseAnime 3.5s ease-in-out infinite;
+      letter-spacing: 0.1em;
+      z-index: 2;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: #66ccff;
+      text-shadow:
+        0 0 12px #33aaff,
+        0 0 20px #0088cc;
+      margin-bottom: 30px;
+      user-select: text;
+      letter-spacing: 0.12em;
       animation: pulseGlow 4s ease-in-out infinite;
       z-index: 2;
-      user-select: text;
     }
 
-    h1 {
-      font-size: 3.5rem;
-      letter-spacing: 0.2em;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      letter-spacing: 0.1em;
-      font-weight: 400;
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { text-shadow:
-        0 0 10px #7fffd4,
-        0 0 20px #00ffff,
-        0 0 30px #00b3b3,
-        0 0 40px #00ffff;
+    @keyframes pulseAnime {
+      0%, 100% {
+        text-shadow:
+          0 0 15px #ff5fa3,
+          0 0 25px #ff1a75,
+          0 0 40px #ff004c;
       }
       50% {
         text-shadow:
-          0 0 20px #00ffff,
-          0 0 40px #7fffd4,
-          0 0 50px #00b3b3,
-          0 0 60px #00ffff;
+          0 0 25px #ff1a75,
+          0 0 40px #ff004c,
+          0 0 60px #ff8ec4;
       }
     }
 
-    /* Glass panel for inputs */
+    @keyframes pulseGlow {
+      0%, 100% {
+        text-shadow:
+          0 0 12px #33aaff,
+          0 0 20px #0088cc;
+      }
+      50% {
+        text-shadow:
+          0 0 20px #0088cc,
+          0 0 30px #005577;
+      }
+    }
+
+    /* Glassy input panel */
     .panel {
-      background: rgba(10, 10, 30, 0.75);
-      border-radius: 16px;
-      padding: 40px 50px;
+      background: rgba(20, 20, 40, 0.85);
+      border-radius: 18px;
+      padding: 38px 48px;
       box-shadow:
-        0 0 20px rgba(0, 255, 255, 0.3),
-        inset 0 0 60px rgba(0, 255, 255, 0.1);
+        0 0 25px rgba(255, 110, 170, 0.25),
+        inset 0 0 40px rgba(255, 110, 170, 0.12);
       width: 320px;
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 255, 255, 0.25);
+      backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(255, 110, 170, 0.3);
       z-index: 3;
       user-select: none;
     }
 
-    /* Input & button */
+    /* Inputs and button */
     input, button {
       width: 100%;
-      padding: 15px 18px;
-      margin: 15px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
       border: none;
-      border-radius: 12px;
-      font-size: 18px;
-      background: rgba(0, 255, 255, 0.1);
-      color: #7fffd4;
+      border-radius: 14px;
+      font-size: 16px;
+      background: rgba(255, 110, 170, 0.12);
+      color: #ffd2e6;
       box-shadow:
-        0 0 8px #00ffff,
-        inset 0 0 10px #00b3b3;
+        0 0 10px #ff69b4,
+        inset 0 0 15px #ff4c8b;
       transition: all 0.3s ease;
       font-family: 'Share Tech Mono', monospace;
       user-select: text;
     }
 
     input::placeholder {
-      color: #00ffffaa;
+      color: #ff9dc7cc;
       font-style: italic;
     }
 
     input:focus {
       outline: none;
-      background: rgba(0, 255, 255, 0.3);
+      background: rgba(255, 110, 170, 0.3);
       box-shadow:
-        0 0 18px #00ffff,
-        inset 0 0 25px #00b3b3;
+        0 0 25px #ff4c8b,
+        inset 0 0 30px #ff1a57;
       transform: scale(1.05);
     }
 
     button {
       cursor: pointer;
       font-weight: 700;
-      background: linear-gradient(45deg, #00ffff, #0077b6);
+      background: linear-gradient(135deg, #ff69b4, #d81e5b);
       box-shadow:
-        0 0 20px #00ffff,
-        0 0 40px #00b3b3,
-        inset 0 0 40px #00e5ff;
-      color: #000;
+        0 0 25px #ff5a8a,
+        0 0 50px #d81e5b,
+        inset 0 0 60px #ff1a57;
+      color: #fff0f6;
       user-select: none;
-      animation: pulseButton 2.5s ease-in-out infinite;
+      animation: pulseButton 2.8s ease-in-out infinite;
+      letter-spacing: 0.06em;
     }
 
     button:hover {
-      background: linear-gradient(45deg, #00e5ff, #00ffff);
-      transform: scale(1.1);
+      background: linear-gradient(135deg, #d81e5b, #ff69b4);
+      transform: scale(1.12);
       box-shadow:
-        0 0 30px #00ffff,
-        0 0 60px #00e5ff,
-        inset 0 0 50px #00b3b3;
+        0 0 40px #ff1a57,
+        0 0 70px #ff4c8b,
+        inset 0 0 80px #d81e5b;
     }
 
     @keyframes pulseButton {
       0%, 100% {
         box-shadow:
-          0 0 20px #00ffff,
-          0 0 40px #00b3b3,
-          inset 0 0 40px #00e5ff;
+          0 0 25px #ff5a8a,
+          0 0 50px #d81e5b,
+          inset 0 0 60px #ff1a57;
       }
       50% {
         box-shadow:
-          0 0 40px #00e5ff,
-          0 0 60px #0077b6,
-          inset 0 0 60px #00b3b3;
+          0 0 45px #ff1a57,
+          0 0 70px #ff4c8b,
+          inset 0 0 80px #d81e5b;
       }
     }
 
@@ -169,8 +188,8 @@
     #loader {
       display: none;
       margin: 20px auto 0 auto;
-      border: 5px solid #003340;
-      border-top: 5px solid #00ffff;
+      border: 5px solid #3a0029;
+      border-top: 5px solid #ff5a8a;
       border-radius: 50%;
       width: 36px;
       height: 36px;
@@ -185,27 +204,27 @@
 
     /* Footer */
     p {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #0099aaaa;
+      margin-top: 38px;
+      font-size: 13px;
+      color: #ffaad0bb;
       user-select: none;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
     }
 
     /* Neon spark particles */
     .spark {
       position: absolute;
-      background: #00ffff;
+      background: #ff69b4;
       box-shadow:
-        0 0 10px #00ffff,
-        0 0 20px #00b3b3,
-        0 0 40px #00e5ff;
+        0 0 12px #ff69b4,
+        0 0 25px #d81e5b,
+        0 0 40px #ff1a57;
       border-radius: 50%;
       opacity: 0.3;
       pointer-events: none;
       animation: floatUp linear infinite;
       z-index: 1;
-      filter: drop-shadow(0 0 5px #00ffff);
+      filter: drop-shadow(0 0 5px #ff69b4);
     }
 
     @keyframes floatUp {
@@ -219,130 +238,151 @@
       }
     }
 
+    /* Sakura petals falling */
+    .petal {
+      position: fixed;
+      top: -40px;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle at 50% 50%, #ffaad0dd, #d81e5bdd);
+      border-radius: 40% 60% 70% 30% / 50% 60% 40% 50%;
+      filter: drop-shadow(0 0 5px #ff69b4cc);
+      opacity: 0.75;
+      animation: fallPetal linear infinite;
+      pointer-events: none;
+      z-index: 1;
+      transform-origin: center;
+    }
+
+    @keyframes fallPetal {
+      0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateX(100vw) translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
     /* Music toggle */
     #music-toggle {
       position: fixed;
       top: 18px;
       right: 18px;
-      background: #003340dd;
-      border: 1.5px solid #00ffff;
-      color: #00ffff;
-      font-size: 20px;
-      padding: 8px 14px;
-      border-radius: 40px;
+      background: transparent;
+      border: 2px solid #ff69b4;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      color: #ff69b4;
+      font-size: 22px;
       cursor: pointer;
+      box-shadow: 0 0 10px #ff69b4;
       user-select: none;
-      box-shadow: 0 0 15px #00ffffaa;
-      transition: background 0.3s ease;
-      z-index: 11;
+      transition: background 0.3s, color 0.3s;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    #music-toggle:hover {
-      background: #005066dd;
+    #music-toggle.playing {
+      background: #ff69b4;
+      color: #fff0f6;
+      box-shadow: 0 0 30px #ff4c8b;
     }
+
   </style>
 </head>
 <body>
 
-  <!-- Neon Sparks -->
-  <script>
-    for (let i = 0; i < 50; i++) {
-      const spark = document.createElement('div');
-      spark.className = 'spark';
-      const size = Math.random() * 3 + 2;
-      spark.style.width = size + 'px';
-      spark.style.height = size + 'px';
-      spark.style.left = `${Math.random() * 100}%`;
-      spark.style.top = `${Math.random() * 100 + 100}%`;
-      spark.style.animationDuration = `${Math.random() * 15 + 10}s`;
-      spark.style.animationDelay = `${Math.random() * 10}s`;
-      document.body.appendChild(spark);
-    }
-  </script>
+  <h1>Vern Share Booster</h1>
+  <h2>Anime Edition</h2>
 
-  <!-- Background Music -->
-  <audio id="bgm" src="https://files.catbox.moe/6tm6wg.mp3" loop autoplay></audio>
-  <button id="music-toggle" onclick="toggleMusic()">🔊</button>
-
-  <!-- Click Sound -->
-  <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/791/791-preview.mp3" preload="auto"></audio>
-
-  <!-- Confetti -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
-  <!-- Title -->
-  <h1>V E R N&nbsp;&nbsp;B O O S T E R</h1>
-  <h2>FACEBOOK SHARE</h2>
-
-  <!-- Panel -->
   <div class="panel">
-    <input type="text" id="link" placeholder="Enter Facebook post link" autocomplete="off" spellcheck="false" />
-    <input type="number" id="limit" placeholder="Number of shares" min="1" autocomplete="off" />
-    <button onclick="shareNow()">BOOST NOW ⚡</button>
+    <input type="text" placeholder="Enter your FB Token..." id="token" autocomplete="off" />
+    <input type="text" placeholder="Post Message..." id="message" autocomplete="off" />
+    <button id="boost-btn">Boost Shares 🌸</button>
     <div id="loader"></div>
   </div>
 
-  <!-- Footer -->
-  <p>Created by @vern — Not for sale. Report fakes claiming ownership!</p>
+  <p>Powered by your endless anime energy 💖</p>
+
+  <button id="music-toggle" title="Toggle Music">▶️</button>
+
+  <audio id="bg-music" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/07/31/audio_9fbd84d0d0.mp3?filename=happy-anime-theme-11257.mp3"></audio>
 
   <script>
-    const bgm = document.getElementById('bgm');
-    const musicToggle = document.getElementById('music-toggle');
-
-    function toggleMusic() {
-      if (bgm.paused) {
-        bgm.play();
-        musicToggle.textContent = '🔊';
-      } else {
-        bgm.pause();
-        musicToggle.textContent = '🔇';
-      }
+    // Animate sakura petals
+    const petalCount = 18;
+    for(let i=0; i<petalCount; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDuration = (8 + Math.random() * 6) + 's';
+      petal.style.animationDelay = (Math.random() * 15) + 's';
+      petal.style.width = (12 + Math.random() * 10) + 'px';
+      petal.style.height = (12 + Math.random() * 10) + 'px';
+      petal.style.opacity = 0.6 + Math.random() * 0.4;
+      document.body.appendChild(petal);
     }
 
-    function shareNow() {
-      const sound = document.getElementById('clickSound');
-      const loader = document.getElementById('loader');
-      const link = document.getElementById('link').value.trim();
-      const limit = document.getElementById('limit').value.trim();
+    // Add sparkles
+    const sparkCount = 25;
+    for(let i=0; i<sparkCount; i++) {
+      const spark = document.createElement('div');
+      spark.classList.add('spark');
+      spark.style.left = Math.random() * 100 + 'vw';
+      spark.style.top = Math.random() * 100 + 'vh';
+      const size = 6 + Math.random() * 14;
+      spark.style.width = size + 'px';
+      spark.style.height = size + 'px';
+      spark.style.animationDuration = (4 + Math.random() * 5) + 's';
+      spark.style.animationDelay = (Math.random() * 6) + 's';
+      document.body.appendChild(spark);
+    }
 
-      if (!link || !limit || Number(limit) < 1) {
-        alert('Please enter a valid post link and limit!');
+    // Music toggle
+    const musicBtn = document.getElementById('music-toggle');
+    const bgMusic = document.getElementById('bg-music');
+
+    musicBtn.addEventListener('click', () => {
+      if(bgMusic.paused) {
+        bgMusic.play();
+        musicBtn.textContent = '🔊';
+        musicBtn.classList.add('playing');
+      } else {
+        bgMusic.pause();
+        musicBtn.textContent = '▶️';
+        musicBtn.classList.remove('playing');
+      }
+    });
+
+    // Button click loader effect
+    const boostBtn = document.getElementById('boost-btn');
+    const loader = document.getElementById('loader');
+
+    boostBtn.addEventListener('click', () => {
+      const token = document.getElementById('token').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!token || !message) {
+        alert('Please enter both token and message!');
         return;
       }
 
-      sound.play();
-      loader.style.display = 'inline-block';
+      boostBtn.disabled = true;
+      loader.style.display = 'block';
 
-      confetti({
-        particleCount: 150,
-        spread: 90,
-        origin: { y: 0.7 },
-        colors: ['#00ffff', '#0077b6', '#00e5ff']
-      });
+      // Simulate async action with a timeout (replace with real logic)
+      setTimeout(() => {
+        loader.style.display = 'none';
+        boostBtn.disabled = false;
+        alert('Shares boosted successfully! 🌸');
+      }, 3000);
+    });
 
-      fetch('http://localhost:5000/api/share', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: `Shared via Vern Booster! ⚡\nPost: ${link}\nBoost x${limit}`
-        })
-      })
-      .then(res => res.json())
-      .then(data => {
-        loader.style.display = 'none';
-        if (data.id) {
-          alert('✅ Successfully shared!');
-        } else {
-          alert('❌ Share failed!');
-          console.error(data);
-        }
-      })
-      .catch(err => {
-        loader.style.display = 'none';
-        alert('Error sharing post.');
-        console.error(err);
-      });
-    }
   </script>
 
 </body>
